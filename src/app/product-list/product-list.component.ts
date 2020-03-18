@@ -17,7 +17,7 @@ export class ProductListComponent implements OnInit {
   removeItem(id){
     this.products = this.products.filter(product => product.id != id)
   }
-  copyItem(product1){
+  showDetail(product1){
     this.selected = product1;
     console.log(this.selected.name)
   }
