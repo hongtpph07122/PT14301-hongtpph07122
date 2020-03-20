@@ -14,10 +14,10 @@ import { TableComponent } from './table/table.component';
 import { DetailComponent } from './detail/detail.component';
 import { ProductService } from './services/product.service';
 import { ProductAddComponent } from './product-add/product-add.component';
-
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
+  imports:      [ BrowserModule, FormsModule, AppRoutingModule ],
   declarations: [ AppComponent, HelloComponent, CategoryComponent, SlideComponent, ProductListComponent, ProductComponent, NavComponent, FooterComponent, TableComponent, DetailComponent, ProductAddComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ProductService]
