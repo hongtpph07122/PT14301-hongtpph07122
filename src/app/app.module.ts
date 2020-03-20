@@ -12,7 +12,7 @@ import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { TableComponent } from './table/table.component';
 import { DetailComponent } from './detail/detail.component';
-import { ProductService } from './services/product-service';
+import { ProductService } from './services/product.service';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
