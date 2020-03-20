@@ -1,21 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-import { data } from '../MockProduct';
+import { ProductService } from '../services/product.service';
 import { Product } from '../Product';
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
-  styleUrls: ['./table.component.css']
+  styleUrls: ['./table.component.scss']
 })
 export class TableComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-  products = data;
+  products : Product[];
   selected : Product;
-  removeProduct(id){
-    this.products = this.products.filter(product => product.id != id)
-  }
+  constructor(private productService : ProductService) { }
 
+  ngOnInit(): void {
+    this.products = this.productService.getProducts();
+  }
+  
+  
+  removeProduct(id){
+    this.products =  this.productService.removeProduct(id);
+  }
 }
