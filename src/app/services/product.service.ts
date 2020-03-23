@@ -11,8 +11,8 @@ export class ProductService {
   getProducts(){  //Lấy tất cả sản phẩm
     return this.products;
   }
-  getProduct(){
-    return this.selected;
+  getProduct(id){
+     return this.products.find(product => product.id == id);
   }
   addProduct(product){
     let newobj = {...product}
@@ -24,5 +24,8 @@ export class ProductService {
   setProduct(product){
     this.selected = product;
     console.log(this.selected)
+  }
+  updateProduct(product){
+    return this.products.map(item => item.id === product.id ? product : item )
   }
 }

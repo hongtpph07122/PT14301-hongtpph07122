@@ -5,6 +5,8 @@
             <th>ProductName</th>
             <th>Price</th>
             <th>RemoveProduct</th>
+            <th>ShowDetail</th>
+            <th>Edit</th>
         </tr>
     </thead>
     <tbody *ngFor= "let item of products">
@@ -13,6 +15,9 @@
             <td>{{item.name}}</td>
             <td>{{item.price}}</td>
             <td><button class="btn btn-primary" (click)= "removeProduct(item.id)">Remove</button></td>
+            <td><button class="btn btn-primary" routerLink="/product/{{item.id}}">ShowDetail</button></td>
+            <td><button class="btn btn-primary" routerLink="/edit-product/{{item.id}}">Edit</button></td>
         </tr>
     </tbody>
 </table>
+<app-product-add></app-product-add>
