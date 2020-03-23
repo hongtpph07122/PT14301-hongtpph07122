@@ -8,8 +8,10 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { ServiceComponent } from './service/service.component';
 import { DetailComponent } from './detail/detail.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
+import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   {path:'', redirectTo:'/home', pathMatch : 'full'},
+  {path: 'home', component: HomeComponent},
   {path:'add-product', component : ProductAddComponent},
   {path:'product-list', component : ProductListComponent},
   {path:'product-manager', component : TableComponent},
