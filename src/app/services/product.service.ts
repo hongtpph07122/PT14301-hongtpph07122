@@ -31,7 +31,7 @@ export class ProductService {
   }
 
   updateProduct(product):Observable<Product>{
-    return this.http.put<Product>(`${this.api}/${product.}`,product);
+    return this.http.put<Product>(`${this.api}/${product.id}`,product);
     // return this.products.map(item => item.id === product.id ? product : item )
   }
 }
