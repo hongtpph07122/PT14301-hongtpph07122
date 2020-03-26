@@ -28,8 +28,8 @@ export class ProductEditComponent implements OnInit {
   }
   submitForm(){
     this.productService.updateProduct(this.product).subscribe(data => {
-      console.log(data)
+      this.product = data;
     })
-    // this.router.navigate(['/product-manager']);
+    this.router.navigate(['/product-manager']);
   }
 }
