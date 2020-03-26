@@ -18,6 +18,7 @@ const routes: Routes = [
   {path:'about', component : AboutComponent},
   {path:'service', component : ServiceComponent},
   {path: 'product-list/:id', component: DetailComponent},
+  {path: 'product-manager/:id', component: DetailComponent},
   {path: 'edit-product/:id', component: ProductEditComponent},
   {path:'**', component : NotFoundComponent},
 

@@ -15,7 +15,7 @@
             <td>{{item.name}}</td>
             <td>{{item.price}}</td>
             <td><button class="btn btn-primary" (click)= "removeProduct(item.id)">Remove</button></td>
-            <td><button class="btn btn-primary" routerLink="/product/{{item.id}}">ShowDetail</button></td>
+            <td><button class="btn btn-primary" routerLink="/product-manager/{{item.id}}">ShowDetail</button></td>
             <td><button class="btn btn-primary" routerLink="/edit-product/{{item.id}}">Edit</button></td>
         </tr>
     </tbody>
