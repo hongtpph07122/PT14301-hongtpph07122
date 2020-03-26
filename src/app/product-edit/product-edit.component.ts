@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../services/product.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Product } from '../Product';
 
 @Component({
   selector: 'app-product-edit',
@@ -8,10 +9,10 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./product-edit.component.css']
 })
 export class ProductEditComponent implements OnInit {
-
+  product : Product;
   constructor(
     private productService : ProductService,
-    private activatedRoute : ActivatedRoute,
+    private route : ActivatedRoute,
     private router : Router
   ) { }
 
@@ -19,12 +20,16 @@ export class ProductEditComponent implements OnInit {
     this.getProduct();
   }
   getProduct(){
-    this.activatedRoute.params.subscribe(param => {
-      this.product = this.productService.getProduct(param.id);
-    })
+    this.route.params.subscribe(param => {
+      this.productService.getProduct(param.id).subscribe(data => {
+        this.product = data;
+      })
+    });
   }
   submitForm(){
-    this.productService.updateProduct(this.product);
+    this.productService.updateProduct(this.product).subscribe(data => {
+      console.log(data)
+    })
     this.router.navigate(['/product-list']);
   }
 }

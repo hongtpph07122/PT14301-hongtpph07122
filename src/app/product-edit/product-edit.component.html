@@ -3,7 +3,7 @@
         <div class="box">
             <div class="box-header">Edit Products</div>
             <div class="box-body">
-                <form>
+                <form *ngIf="product">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" name="name" [(ngModel)]="product.name" class="form-control">

@@ -19,7 +19,7 @@ const routes: Routes = [
   {path:'service', component : ServiceComponent},
   {path: 'product-list/:id', component: DetailComponent},
   {path: 'product-manager/:id', component: DetailComponent},
-  {path: 'edit-product/:id', component: ProductEditComponent},
+  {path: 'product-manager/edit/:id', component: ProductEditComponent},
   {path:'**', component : NotFoundComponent},
 
 
