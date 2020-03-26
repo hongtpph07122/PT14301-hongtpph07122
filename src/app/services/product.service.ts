@@ -20,8 +20,8 @@ export class ProductService {
     // return this.products.find(product => product.id == id);
     
   }
-  addProduct(product :Product):Observable<Product>{
-    return this.http.post<Product>(this.api,product);
+  addProduct(product):Observable<Product>{
+    return this.http.post<Product>(`${this.api}`,product);
     // let newobj = {img : "http://placehold.it/700x400",desc : "Mô tả thông tin của sản phẩm",...product}
     // this.products.push(newobj);
   }
