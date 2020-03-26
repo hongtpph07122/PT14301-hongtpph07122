@@ -22,7 +22,10 @@ export class ProductListComponent implements OnInit {
       this.products = data;
     })
   }
-  
+  showDetail(product1){
+    this.selected = product1;
+    this.productService.setProduct(product1);
+  }
   
   
 }
