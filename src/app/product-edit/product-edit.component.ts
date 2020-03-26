@@ -27,6 +27,7 @@ export class ProductEditComponent implements OnInit {
     });
   }
   submitForm(){
+    
     this.productService.updateProduct(this.product).subscribe(data => {
       this.product = data;
     })

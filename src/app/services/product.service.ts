@@ -30,8 +30,8 @@ export class ProductService {
     // return this.products = this.products.filter(product => product.id != id);
   }
 
-  updateProduct(product : Product):Observable<Product>{
-    return this.http.put<Product>(`${this.api}/${product}`,product);
+  updateProduct(product):Observable<Product>{
+    return this.http.put<Product>(`${this.api}/${product.}`,product);
     // return this.products.map(item => item.id === product.id ? product : item )
   }
 }
