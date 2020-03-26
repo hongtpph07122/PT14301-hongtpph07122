@@ -15,11 +15,14 @@ export class TableComponent implements OnInit {
     private router : Router) { }
 
   ngOnInit(): void {
-    this.productService.getProducts().subscribe(data => {
-      this.products = data;
-    })
+    this.getProducts();
   }
   
+  getProducts(){
+    this.productService.getProducts().subscribe(data => {
+        this.products = data;
+    })
+  }
   
   removeProduct(id){
     this.productService.removeProduct(id).subscribe();

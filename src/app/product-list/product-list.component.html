@@ -16,7 +16,6 @@
           <h5>${{item.price}}</h5>
           <p class="card-text">{{item.desc}}</p>
           <p class="card-text">{{item.status ?"Còn Hàng":"Hết Hàng"}}</p>
-          <button class="btn btn-primary" (click) ="removeItem(item.id)">Xóa</button>
           <button class="btn btn-primary" routerLink="/product/{{item.id}}">ShowDetail</button>
         </div>
         <div class="card-footer">
